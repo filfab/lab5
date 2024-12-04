@@ -1,0 +1,14 @@
+project Zad4 is
+    for Exec_Dir use ".";
+    for Source_Dirs use ("./zad4/src");
+    for Object_Dir use "./zad4/obj/";
+    for Main use ("bisection.adb");
+
+    package Compiler is
+        for Switches ("Ada") use ("");
+    end Compiler;
+
+    package Builder is
+      for Executable ("bisection.adb") use "zad4.out";
+    end Builder;
+end Zad4;

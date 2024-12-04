@@ -1,0 +1,14 @@
+project Zad2 is
+    for Exec_Dir use ".";
+    for Source_Dirs use ("./zad2/src");
+    for Object_Dir use "./zad2/obj/";
+    for Main use ("listtest.adb");
+
+    package Compiler is
+        for Switches ("Ada") use ("");
+    end Compiler;
+
+    package Builder is
+      for Executable ("listtest.adb") use "zad2.out";
+    end Builder;
+end Zad2;
